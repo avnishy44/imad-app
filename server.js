@@ -14,15 +14,15 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/article-one',function(req,res){
-   res.send('the file is being sered and will be available when it is loaded') ;
+   res.send('the file is being served and will be available when it is loaded') ;
 });
 
 app.get('/article-two',function(req,res){
-   res.send('the file is being sered and will be available when it is loaded') ;
+   res.send('the file is being served and will be available when it is loaded') ;
 });
 
 app.get('/article-three',function(req,res){
-   res.send('the file is being sered and will be available when it is loaded') ;
+   res.send('the file is being served and will be available when it is loaded') ;
 });
 
 app.get('/ui/madi.png', function (req, res) {
