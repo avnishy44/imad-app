@@ -13,3 +13,14 @@ element.innerHTML = 'Hi I am Avnish Ravindra Yadav';
  img.onclick = function() {
      var interval= setInterval(moveRight,25);
  };
+ 
+ // counter function
+ var counter =0;
+ button.onclick = function() {
+   
+   counter+=1;
+   var span = document.getElementbyId('count');
+   span.innerHTML=counter.toString();
+   
+     
+ };
