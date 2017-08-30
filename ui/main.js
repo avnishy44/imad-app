@@ -15,6 +15,7 @@ element.innerHTML = 'Hi I am Avnish Ravindra Yadav';
  };
  
  // counter function
+ var button = getElementById('counter');
  var counter =0;
  button.onclick = function() {
    
