@@ -85,6 +85,8 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/:articlename',function(req,res){
+    // articlename can be articleOne,articleTwo,articleThree as specified by the user
+    //artcles[articlename] fetch the content of articlename to the web page
     var articlename = req.params.articlename;
     res.send(createTemplate(articles[articlename]));
 });
