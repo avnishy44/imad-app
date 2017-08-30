@@ -54,8 +54,7 @@ console.log('Loaded!');
      
  };
  
- var ul= document.getElementById('namelist');
- ul.innerHTML= list;
+ var ul= document.getElementById('namelist').innerHTML=list;
  
  
  
