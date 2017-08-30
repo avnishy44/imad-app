@@ -20,7 +20,7 @@ element.innerHTML = 'Hi I am Avnish Ravindra Yadav';
    
    counter=counter+1;
    var elem = document.getElementById('count');
-   elem.innerHTML = counter.toString();
+   elem.innerHTML = counter;
    
      
  };
