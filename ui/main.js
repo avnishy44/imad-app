@@ -54,7 +54,7 @@ console.log('Loaded!');
      
  };
  
- var ul= document.getElementById('namelist').innerHTML=list;
+ var ul= document.getElementById('namearray').innerHTML=list;
  
  
  
