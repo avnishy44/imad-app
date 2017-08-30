@@ -18,8 +18,11 @@ element.innerHTML = 'Hi I am Avnish Ravindra Yadav';
  var button = document.getElementById('counter');
  var counter =0;
  button.onclick = function() {
+     //create a request
    
    var request= new XMLHttpRequest();
+   
+   //capture the response and store it in a variable
    
    request.onreadystatechange=function(){
        
@@ -32,6 +35,7 @@ element.innerHTML = 'Hi I am Avnish Ravindra Yadav';
        }
    };
    
+   //make a request
    request.open('GET','http://avnishy44.imad.hasura-app.io/counter',true);
    request.send(null);
   
