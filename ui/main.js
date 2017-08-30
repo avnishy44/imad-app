@@ -18,7 +18,7 @@ element.innerHTML = 'Hi I am Avnish Ravindra Yadav';
  var counter =0;
  button.onclick = function() {
    
-   counter+=1;
+   counter=counter+1;
    var span = document.getElementbyId('count');
    span.innerHTML=counter.toString();
    
