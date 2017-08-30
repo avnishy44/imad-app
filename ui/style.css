@@ -7,16 +7,12 @@ body {
     text-align: center;
 }
 
-.text-big {
-    font-size: 300%;
-}
-
-.bold {
-    font-weight: bold;
+.info {
+    text-align: left;
 }
 
 .img-medium {
-    height: 400px;
+    height: 200px;
 }
 .container
 {
