@@ -32,7 +32,7 @@ element.innerHTML = 'Hi I am Avnish Ravindra Yadav';
        }
    };
    
-   request.open('GET','https://avnishy44.imad.hasura-app.io/counter',true);
+   request.open('GET','http://avnishy44.imad.hasura-app.io/counter',true);
    request.send(null);
   
    
