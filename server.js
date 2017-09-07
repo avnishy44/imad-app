@@ -28,35 +28,7 @@ app.get('/test-db',function(err,res){
    });
 });
 
-var articles= {
-    articleOne : {
-        title : "ArticleOne | Avnish Yadav",
-        heading : "ArticleOne",
-        date : "30/08/2017",
-        content : `
-                    hi the article one is being processed for the time being please
-                    rest assured that it will be made available as and when it is created.
-           `
-},
-    articleTwo :{
-        title : "ArticleTwo | Avnish Yadav",
-        heading : "ArticleTwo",
-        date : "30/08/2017",
-        content : `
-                    hi the article two is being processed for the time being please
-                    rest assured that it will be made available as and when it is created.
-           `
-    },
-    articleThree :{
-        title : "ArticleThree | Avnish Yadav",
-        heading : "ArticleThree",
-        date : "30/08/2017",
-        content : `
-                    hi the article Three is being processed for the time being please
-                    rest assured that it will be made available as and when it is created.
-               `
-    }
-};
+
 
 function createTemplate (data) {
         var title = data.title;
