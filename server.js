@@ -20,7 +20,7 @@ var pool= new Pool(config);
 app.get('/test-db',function(err,res){
    pool.query("SELECT * FROM test",function(err,result){
      if(err){
-         res.status(500).send(err.tostring());
+         res.status(500).send(err.toString());
      }  
      else{
          res.send(JSON.stringify(result.rows));
@@ -117,11 +117,23 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
 });
 
-app.get('/:articlename',function(req,res){
+app.get('/articles/:articlename',function(req,res){
     // articlename can be articleOne,articleTwo,articleThree as specified by the user
     //artcles[articlename] fetch the content of articlename to the web page
     var articlename = req.params.articlename;
-    res.send(createTemplate(articles[articlename]));
+    pool.query("SELECT *FROM articles",function(err,res){
+       if(err){
+           res.status(500).send(err.toString());
+       } 
+       else{
+           if(result.rows.length===0){
+               res.status(404).send("Article not found");
+           }
+           var articleData=result.rows[0];
+           res.send(createTemplate(articleData));
+       }
+    });
+    
 });
 
 app.get('/ui/madi.png', function (req, res) {
