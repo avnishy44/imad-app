@@ -23,7 +23,7 @@ app.get('/test-db',function(err,res){
          res.status(500).send(err.tostring());
      }  
      else{
-         res.send(JSON.stringify(result));
+         res.send(JSON.stringify(result.rows));
      }
    });
 });
