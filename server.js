@@ -120,8 +120,7 @@ app.get('/counter',function(req,res){
 app.get('/articles/:articlename',function(req,res){
     // articlename can be articleOne,articleTwo,articleThree as specified by the user
     //artcles[articlename] fetch the content of articlename to the web page
-    var articlename = req.params.articlename;
-    pool.query("SELECT *FROM articles",function(err,res){
+    pool.query("SELECT *FROM articles WHERE title ="+req.params.articlename,function(err,res){
        if(err){
            res.status(500).send(err.toString());
        } 
