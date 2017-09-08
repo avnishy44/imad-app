@@ -143,10 +143,10 @@ app.post('/login',function(req,res){
 app.get('/check-login',function(req,res){
     
     if(req.session&&req.session.auth&&req.session.auth.userId){
-        send('user is currently logged in: '+ req.session.auth.userId.toString());
+        res.send('user is currently logged in: '+ req.session.auth.userId.toString());
     }
     else{
-        send('you are not logged in');
+        res.send('you are not logged in');
     }
 });
 
