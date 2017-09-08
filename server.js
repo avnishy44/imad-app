@@ -79,7 +79,7 @@ app.get('/', function (req, res) {
 function hash (input,salt){
     //how do we create a hash
     var hashed= crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
-    return hashed.toString('hex');
+    return ["pbkdf2","10000",salt,hashed.toString('hex')].join('$');
 }
 
 app.post('/create-user',function(req,res){
@@ -98,6 +98,31 @@ app.post('/create-user',function(req,res){
      }       
    });
    
+    
+});
+
+app.post('/login',function(req,res){
+   
+   var username = req.body.username;
+   var password = req.body.password;
+
+   pool.query('SELECT * FROM "user" username=$1 ',[username],function(err,result){
+    if(err){
+        res.status(500).send(err.toString());
+    } 
+    else{
+        if(username===0){
+         res.send(403).send('username/password did not match');   
+        }
+        else{
+            //match the password
+            var dbString = result.rows[0].password;
+            
+        }
+     }       
+   });
+   
+     
     
 });
 
