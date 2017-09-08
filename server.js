@@ -111,7 +111,7 @@ app.post('/login',function(req,res){
         res.status(500).send(err.toString());
     } 
     else{
-        if(username===0 | username != result.rows[0].username){
+        if(username===0 ){
          res.send(403).send('username/password did not match');   
         }
         else{
